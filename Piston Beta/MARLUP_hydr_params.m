@@ -7,7 +7,10 @@
 %%
 
 % constants
-m_load = 2850;                  % Effective inertia load [kg]
+% Masa móvil mínima conocida asociada a un actuador.
+% Incluye el cilindro/estructura superior que se desplaza con el vástago.
+% Faltan por incorporar otras masas equivalentes de MARLUP.
+m_load = 58;
 g = 9.81;                       % Gravitational acceleration [m/s^2]
 p_tank = 1.01325e5 ;            % Atmospheric pressure [Pa] 
 p_supply = 90e5 ;               % Supply pressure [Pa]
@@ -16,8 +19,8 @@ friction.visc = 1000 ;          % Viscous friction factor [Ns/m]
 
 
 % cylinder
-cyl.d_piston = 0.060;                                           % Cylinder piston diameter [m]
-cyl.d_rod = 0.030;                                              % Cylinder rod diameter [m]
+cyl.d_piston = 0.040;                                           % Cylinder piston diameter [m]
+cyl.d_rod = 0.028;                                              % Cylinder rod diameter [m]
 cyl.stroke = 0.45;                                              % Cylinder stroke leght [m]
 cyl.A_piston = pi*(cyl.d_piston/2)^2;                           % Cylinder piston area [m^2]
 cyl.A_rodside = (pi*(cyl.d_piston/2)^2)-(pi*(cyl.d_rod/2)^2) ;  % Cylinder rod side area [m^2]
